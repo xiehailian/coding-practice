@@ -1,6 +1,5 @@
 package math
 
-
 //实现 int sqrt(int x) 函数。
 //
 //计算并返回 x 的平方根，其中 x 是非负整数。
@@ -34,13 +33,13 @@ func mySqrt(x int) int {
 	var l, r, m int64
 
 	l = 0
-	r = int64(x/2)
+	r = int64(x / 2)
 
 	for l <= r {
-		m = l + (r - l)/2
-		if m * m == int64(x) {
+		m = l + (r-l)/2
+		if m*m == int64(x) {
 			return int(m)
-		} else if m * m < int64(x) {
+		} else if m*m < int64(x) {
 			l = m + 1
 		} else {
 			r = m - 1

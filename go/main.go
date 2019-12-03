@@ -55,8 +55,8 @@ func main() {
 	//fmt.Println(len([]rune(str)),strings.Count(str,""), len(str))
 	//fmt.Println(string([]rune{122, 212, 333, 125}))
 
-	s := []int{1}
-	fmt.Println(s[1:], s[:0])
+	//s := []int{1}
+	//fmt.Println(s[1:], s[:0])
 
 	//fmt.Println(strconv.Itoa(1))
 
@@ -65,5 +65,6 @@ func main() {
 	//b[8] |= 1 << 4
 	//fmt.Println(unsafe.Sizeof(b[0]))
 
-	fmt.Println(^uint32(0))
+	fmt.Println(uint64(^uint(0)) == ^uint64(0))
+
 }

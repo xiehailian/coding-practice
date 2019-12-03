@@ -16,7 +16,7 @@ package tree
 //链接：https://leetcode-cn.com/problems/encode-n-ary-tree-to-binary-tree
 
 type NTreeNode struct {
-	Val int
+	Val      int
 	Children []*NTreeNode
 }
 

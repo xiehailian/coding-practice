@@ -14,7 +14,7 @@ package array
 //来源：力扣（LeetCode）
 //链接：https://leetcode-cn.com/problems/move-zeroes
 
-func moveZeroes(nums []int)  {
+func moveZeroes(nums []int) {
 
 	if nums == nil || len(nums) <= 1 {
 		return

@@ -36,7 +36,7 @@ search(api_dev_key, search_terms, maximum_results_to_return, sort, page_token)
 * api_dev_key (string)：注册账户的API开发人员密钥，除其他用途外，这将用于根据分配的配额限制用户
 * search_terms (string):  包含搜索词项的字符串
 * maximum_results_to_return (number): 返回的推文数
-* sort (number):  可选排序模式:最新第一(0 -默认)，最佳匹配(1)，最喜欢(2) 
+* sorts (number):  可选排序模式:最新第一(0 -默认)，最佳匹配(1)，最喜欢(2) 
 * page_token (string):   此标记将在结果集中指定应该返回的页面。 
 
  **Returns**: (JSON) 

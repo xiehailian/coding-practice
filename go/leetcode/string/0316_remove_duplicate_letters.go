@@ -26,13 +26,13 @@ func removeDuplicateLetters(s string) string {
 	for i := 0; i < len(s); i++ {
 		counts[s[i]-'a']--
 		if insert[s[i]-'a'] {
-			  continue
+			continue
 		}
-		for j := len(stack)-1; j >= 0; j-- {
+		for j := len(stack) - 1; j >= 0; j-- {
 			if !(s[i] < stack[j] && counts[stack[j]-'a'] > 0) {
 				break
 			}
-			insert[stack[j] - 'a'] = false
+			insert[stack[j]-'a'] = false
 			stack = stack[:j]
 		}
 		insert[s[i]-'a'] = true

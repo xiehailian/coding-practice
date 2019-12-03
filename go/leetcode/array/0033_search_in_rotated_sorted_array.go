@@ -22,8 +22,8 @@ package array
 //来源：力扣（LeetCode）
 //链接：https://leetcode-cn.com/problems/search-in-rotated-sorted-array
 
-func search(nums []int, target int) int{
-	if nums == nil || len(nums) == 0  {
+func search(nums []int, target int) int {
+	if nums == nil || len(nums) == 0 {
 		return -1
 	}
 
@@ -48,10 +48,10 @@ func search(nums []int, target int) int{
 
 func bsearch(nums []int, target, left, right int) int {
 	for left <= right {
-		mid := left + (right - left) / 2
+		mid := left + (right-left)/2
 		if nums[mid] > target {
 			right = mid - 1
-		} else if nums[mid] < target{
+		} else if nums[mid] < target {
 			left = mid + 1
 		} else {
 			return mid
@@ -65,7 +65,7 @@ func findRotateIndex(nums []int) int {
 	r := len(nums) - 1
 
 	for l <= r {
-		mid := (r - l) / 2 + l
+		mid := (r-l)/2 + l
 		if nums[mid] > nums[mid+1] {
 			return mid
 		}

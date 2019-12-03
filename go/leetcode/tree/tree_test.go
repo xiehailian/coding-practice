@@ -27,12 +27,12 @@ func Test94(t *testing.T) {
 }
 
 func Test98(t *testing.T) {
-	tests := []struct{
-		input *TreeNode
+	tests := []struct {
+		input  *TreeNode
 		output bool
 	}{
 		{
-			input: &TreeNode{6, &TreeNode{1,nil, nil}, &TreeNode{3, nil, nil}},
+			input:  &TreeNode{6, &TreeNode{1, nil, nil}, &TreeNode{3, nil, nil}},
 			output: true,
 		},
 	}
@@ -46,14 +46,14 @@ func Test98(t *testing.T) {
 }
 
 func Test100(t *testing.T) {
-	tests := []struct{
-		p *TreeNode
-		q *TreeNode
+	tests := []struct {
+		p      *TreeNode
+		q      *TreeNode
 		output bool
 	}{
 		{
-			p: &TreeNode{6, &TreeNode{1,nil, nil}, &TreeNode{3, nil, nil}},
-			q: &TreeNode{6, &TreeNode{1,nil, nil}, &TreeNode{3, nil, nil}},
+			p:      &TreeNode{6, &TreeNode{1, nil, nil}, &TreeNode{3, nil, nil}},
+			q:      &TreeNode{6, &TreeNode{1, nil, nil}, &TreeNode{3, nil, nil}},
 			output: true,
 		},
 	}
@@ -67,14 +67,14 @@ func Test100(t *testing.T) {
 }
 
 func Test102(t *testing.T) {
-	tests := []struct{
-		input *TreeNode
+	tests := []struct {
+		input  *TreeNode
 		output [][]int
 	}{
 		{
 			input: &TreeNode{7,
-			&TreeNode{4,&TreeNode{3, nil, nil}, &TreeNode{5, nil, nil}},
-			&TreeNode{8, &TreeNode{6, nil, nil}, &TreeNode{9, nil, nil}}},
+				&TreeNode{4, &TreeNode{3, nil, nil}, &TreeNode{5, nil, nil}},
+				&TreeNode{8, &TreeNode{6, nil, nil}, &TreeNode{9, nil, nil}}},
 			output: [][]int{{7}, {4, 8}, {3, 5, 6, 9}},
 		},
 	}
@@ -88,14 +88,14 @@ func Test102(t *testing.T) {
 }
 
 func Test104(t *testing.T) {
-	tests := []struct{
-		input *TreeNode
+	tests := []struct {
+		input  *TreeNode
 		output int
 	}{
 		{
 			input: &TreeNode{7,
-			&TreeNode{4,&TreeNode{3, nil, nil}, &TreeNode{5, nil, nil}},
-			&TreeNode{8, &TreeNode{6, nil, nil}, &TreeNode{9, nil, nil}}},
+				&TreeNode{4, &TreeNode{3, nil, nil}, &TreeNode{5, nil, nil}},
+				&TreeNode{8, &TreeNode{6, nil, nil}, &TreeNode{9, nil, nil}}},
 			output: 3,
 		},
 	}
@@ -109,16 +109,16 @@ func Test104(t *testing.T) {
 }
 
 func Test112(t *testing.T) {
-	tests := []struct{
-		input *TreeNode
-		sum int
+	tests := []struct {
+		input  *TreeNode
+		sum    int
 		output bool
 	}{
 		{
 			input: &TreeNode{7,
-			&TreeNode{4,&TreeNode{3, nil, nil}, &TreeNode{5, nil, nil}},
-			&TreeNode{8, &TreeNode{6, nil, nil}, &TreeNode{9, nil, nil}}},
-			sum: 14,
+				&TreeNode{4, &TreeNode{3, nil, nil}, &TreeNode{5, nil, nil}},
+				&TreeNode{8, &TreeNode{6, nil, nil}, &TreeNode{9, nil, nil}}},
+			sum:    14,
 			output: true,
 		},
 	}
@@ -132,17 +132,17 @@ func Test112(t *testing.T) {
 }
 
 func Test226(t *testing.T) {
-	tests := []struct{
-		input *TreeNode
+	tests := []struct {
+		input  *TreeNode
 		output *TreeNode
 	}{
 		{
 			input: &TreeNode{4,
-			&TreeNode{2,&TreeNode{1, nil, nil}, &TreeNode{3, nil, nil}},
-			&TreeNode{7, &TreeNode{6, nil, nil}, &TreeNode{9, nil, nil}}},
+				&TreeNode{2, &TreeNode{1, nil, nil}, &TreeNode{3, nil, nil}},
+				&TreeNode{7, &TreeNode{6, nil, nil}, &TreeNode{9, nil, nil}}},
 			output: &TreeNode{4,
-			&TreeNode{7,&TreeNode{9, nil, nil}, &TreeNode{6, nil, nil}},
-			&TreeNode{2, &TreeNode{3, nil, nil}, &TreeNode{1, nil, nil}}},
+				&TreeNode{7, &TreeNode{9, nil, nil}, &TreeNode{6, nil, nil}},
+				&TreeNode{2, &TreeNode{3, nil, nil}, &TreeNode{1, nil, nil}}},
 		},
 	}
 
@@ -155,23 +155,23 @@ func Test226(t *testing.T) {
 }
 
 func Test285(t *testing.T) {
-		tests := []struct{
-		p *TreeNode
-		q *TreeNode
+	tests := []struct {
+		p      *TreeNode
+		q      *TreeNode
 		output *TreeNode
 	}{
 		{
 			p: &TreeNode{6,
-			&TreeNode{4,&TreeNode{3, nil, nil}, &TreeNode{5, nil, nil}},
-			&TreeNode{8, &TreeNode{7, nil, nil}, &TreeNode{9, nil, nil}}},
-			q: &TreeNode{3, nil, nil},
-			output: &TreeNode{4,&TreeNode{3, nil, nil}, &TreeNode{5, nil, nil}},
+				&TreeNode{4, &TreeNode{3, nil, nil}, &TreeNode{5, nil, nil}},
+				&TreeNode{8, &TreeNode{7, nil, nil}, &TreeNode{9, nil, nil}}},
+			q:      &TreeNode{3, nil, nil},
+			output: &TreeNode{4, &TreeNode{3, nil, nil}, &TreeNode{5, nil, nil}},
 		},
 		{
 			p: &TreeNode{7,
-			&TreeNode{4,&TreeNode{3, nil, nil}, &TreeNode{5, nil, nil}},
-			&TreeNode{8, &TreeNode{6, nil, nil}, &TreeNode{9, nil, nil}}},
-			q: &TreeNode{0, nil, nil},
+				&TreeNode{4, &TreeNode{3, nil, nil}, &TreeNode{5, nil, nil}},
+				&TreeNode{8, &TreeNode{6, nil, nil}, &TreeNode{9, nil, nil}}},
+			q:      &TreeNode{0, nil, nil},
 			output: nil,
 		},
 	}
@@ -184,14 +184,13 @@ func Test285(t *testing.T) {
 	}
 }
 
-
 func Test297(t *testing.T) {
-		tests := []struct{
-		input string
+	tests := []struct {
+		input  string
 		output string
 	}{
 		{
-			input: "1,2,3,null,null,4,null,null,5,null,null",
+			input:  "1,2,3,null,null,4,null,null,5,null,null",
 			output: "1,2,3,null,null,4,null,null,5,null,null",
 		},
 	}
@@ -206,8 +205,8 @@ func Test297(t *testing.T) {
 }
 
 func Test333(t *testing.T) {
-	tests := []struct{
-		input *TreeNode
+	tests := []struct {
+		input  *TreeNode
 		output int
 	}{
 		{
@@ -227,8 +226,8 @@ func Test333(t *testing.T) {
 }
 
 func Test426(t *testing.T) {
-	tests := []struct{
-		input *TreeNode
+	tests := []struct {
+		input  *TreeNode
 		output int
 	}{
 		{

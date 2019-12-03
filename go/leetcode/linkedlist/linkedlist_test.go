@@ -5,18 +5,16 @@ import (
 	"testing"
 )
 
-
-
-func Test2(t *testing.T)  {
-	tests := []struct{
-		l1 *ListNode
-		l2 *ListNode
+func Test2(t *testing.T) {
+	tests := []struct {
+		l1     *ListNode
+		l2     *ListNode
 		output *ListNode
 	}{
 		{
-			l1: &ListNode{Val: 2, Next: &ListNode{Val:4, Next: &ListNode{Val: 3, Next: nil}}},
-			l2: &ListNode{Val: 5, Next: &ListNode{Val:6, Next: &ListNode{Val: 4, Next: nil}}},
-			output: &ListNode{Val: 7, Next: &ListNode{Val:0, Next: &ListNode{Val: 8, Next: nil}}},
+			l1:     &ListNode{Val: 2, Next: &ListNode{Val: 4, Next: &ListNode{Val: 3, Next: nil}}},
+			l2:     &ListNode{Val: 5, Next: &ListNode{Val: 6, Next: &ListNode{Val: 4, Next: nil}}},
+			output: &ListNode{Val: 7, Next: &ListNode{Val: 0, Next: &ListNode{Val: 8, Next: nil}}},
 		},
 	}
 
@@ -29,14 +27,14 @@ func Test2(t *testing.T)  {
 }
 
 func Test19(t *testing.T) {
-	tests := []struct{
-		head *ListNode
-		n int
+	tests := []struct {
+		head   *ListNode
+		n      int
 		output *ListNode
 	}{
 		{
-			head: &ListNode{Val: 2, Next: &ListNode{Val:4, Next: &ListNode{Val: 3, Next: nil}}},
-			n: 2,
+			head:   &ListNode{Val: 2, Next: &ListNode{Val: 4, Next: &ListNode{Val: 3, Next: nil}}},
+			n:      2,
 			output: &ListNode{Val: 2, Next: &ListNode{Val: 3, Next: nil}},
 		},
 	}
@@ -49,14 +47,14 @@ func Test19(t *testing.T) {
 	}
 }
 
-func Test23(t *testing.T)  {
-	tests := []struct{
-		input []*ListNode
+func Test23(t *testing.T) {
+	tests := []struct {
+		input  []*ListNode
 		output *ListNode
 	}{
 		{
-			input: []*ListNode{{Val: 1, Next: &ListNode{Val:4, Next: &ListNode{Val: 5, Next: nil}}}, {Val: 1, Next: &ListNode{Val:3, Next: &ListNode{Val: 4, Next: nil}}}, {Val: 2, Next: &ListNode{Val:6, Next: nil}}},
-			output: &ListNode{Val: 1, Next: &ListNode{Val:1, Next: &ListNode{Val: 2, Next: &ListNode{Val:3, Next:&ListNode{Val:4, Next:&ListNode{Val:4, Next:nil}}}}}},
+			input:  []*ListNode{{Val: 1, Next: &ListNode{Val: 4, Next: &ListNode{Val: 5, Next: nil}}}, {Val: 1, Next: &ListNode{Val: 3, Next: &ListNode{Val: 4, Next: nil}}}, {Val: 2, Next: &ListNode{Val: 6, Next: nil}}},
+			output: &ListNode{Val: 1, Next: &ListNode{Val: 1, Next: &ListNode{Val: 2, Next: &ListNode{Val: 3, Next: &ListNode{Val: 4, Next: &ListNode{Val: 4, Next: nil}}}}}},
 		},
 	}
 
@@ -68,14 +66,14 @@ func Test23(t *testing.T)  {
 	}
 }
 
-func Test24(t *testing.T)  {
-	tests := []struct{
-		input *ListNode
+func Test24(t *testing.T) {
+	tests := []struct {
+		input  *ListNode
 		output *ListNode
 	}{
 		{
-			input:  &ListNode{Val: 1, Next: &ListNode{Val:2, Next: &ListNode{Val: 3, Next: &ListNode{Val:4, Next: nil}}}},
-			output: &ListNode{Val: 2, Next: &ListNode{Val:1, Next: &ListNode{Val: 4, Next: &ListNode{Val:3, Next: nil}}}},
+			input:  &ListNode{Val: 1, Next: &ListNode{Val: 2, Next: &ListNode{Val: 3, Next: &ListNode{Val: 4, Next: nil}}}},
+			output: &ListNode{Val: 2, Next: &ListNode{Val: 1, Next: &ListNode{Val: 4, Next: &ListNode{Val: 3, Next: nil}}}},
 		},
 	}
 
@@ -87,16 +85,16 @@ func Test24(t *testing.T)  {
 	}
 }
 
-func Test25(t *testing.T)  {
-	tests := []struct{
-		input *ListNode
-		k int
+func Test25(t *testing.T) {
+	tests := []struct {
+		input  *ListNode
+		k      int
 		output *ListNode
 	}{
 		{
-			input:  &ListNode{Val: 1, Next: &ListNode{Val:2, Next: &ListNode{Val: 3, Next: &ListNode{Val:4, Next: nil}}}},
-			k: 2,
-			output: &ListNode{Val: 2, Next: &ListNode{Val:1, Next: &ListNode{Val: 4, Next: &ListNode{Val:3, Next: nil}}}},
+			input:  &ListNode{Val: 1, Next: &ListNode{Val: 2, Next: &ListNode{Val: 3, Next: &ListNode{Val: 4, Next: nil}}}},
+			k:      2,
+			output: &ListNode{Val: 2, Next: &ListNode{Val: 1, Next: &ListNode{Val: 4, Next: &ListNode{Val: 3, Next: nil}}}},
 		},
 	}
 
@@ -108,21 +106,21 @@ func Test25(t *testing.T)  {
 	}
 }
 
-func Test61(t *testing.T)  {
-	tests := []struct{
-		input *ListNode
-		k int
+func Test61(t *testing.T) {
+	tests := []struct {
+		input  *ListNode
+		k      int
 		output *ListNode
 	}{
 		{
-			input:  &ListNode{Val: 1, Next: &ListNode{Val:2, Next: &ListNode{Val: 3, Next: &ListNode{Val:4, Next: nil}}}},
-			k: 2,
-			output: &ListNode{Val: 3, Next: &ListNode{Val:4, Next: &ListNode{Val: 1, Next: &ListNode{Val:2, Next: nil}}}},
+			input:  &ListNode{Val: 1, Next: &ListNode{Val: 2, Next: &ListNode{Val: 3, Next: &ListNode{Val: 4, Next: nil}}}},
+			k:      2,
+			output: &ListNode{Val: 3, Next: &ListNode{Val: 4, Next: &ListNode{Val: 1, Next: &ListNode{Val: 2, Next: nil}}}},
 		},
 		{
-			input:  &ListNode{Val: 0, Next: &ListNode{Val:1, Next: &ListNode{Val: 2, Next: nil}}},
-			k: 4,
-			output: &ListNode{Val: 2, Next: &ListNode{Val:0, Next: &ListNode{Val: 1, Next: nil}}},
+			input:  &ListNode{Val: 0, Next: &ListNode{Val: 1, Next: &ListNode{Val: 2, Next: nil}}},
+			k:      4,
+			output: &ListNode{Val: 2, Next: &ListNode{Val: 0, Next: &ListNode{Val: 1, Next: nil}}},
 		},
 	}
 
@@ -134,18 +132,18 @@ func Test61(t *testing.T)  {
 	}
 }
 
-func Test147(t *testing.T)  {
-	tests := []struct{
-		input *ListNode
+func Test147(t *testing.T) {
+	tests := []struct {
+		input  *ListNode
 		output *ListNode
 	}{
 		{
-			input:  &ListNode{Val: 4, Next: &ListNode{Val:2, Next: &ListNode{Val: 3, Next: &ListNode{Val:4, Next: nil}}}},
-			output: &ListNode{Val: 2, Next: &ListNode{Val:3, Next: &ListNode{Val: 4, Next: &ListNode{Val:4, Next: nil}}}},
+			input:  &ListNode{Val: 4, Next: &ListNode{Val: 2, Next: &ListNode{Val: 3, Next: &ListNode{Val: 4, Next: nil}}}},
+			output: &ListNode{Val: 2, Next: &ListNode{Val: 3, Next: &ListNode{Val: 4, Next: &ListNode{Val: 4, Next: nil}}}},
 		},
 		{
-			input:  &ListNode{Val: 3, Next: &ListNode{Val:2, Next: &ListNode{Val: 1, Next: nil}}},
-			output: &ListNode{Val: 1, Next: &ListNode{Val:2, Next: &ListNode{Val: 3, Next: nil}}},
+			input:  &ListNode{Val: 3, Next: &ListNode{Val: 2, Next: &ListNode{Val: 1, Next: nil}}},
+			output: &ListNode{Val: 1, Next: &ListNode{Val: 2, Next: &ListNode{Val: 3, Next: nil}}},
 		},
 	}
 
@@ -157,16 +155,16 @@ func Test147(t *testing.T)  {
 	}
 }
 
-func Test160(t *testing.T)  {
-	tests := []struct{
-		headA *ListNode
-		headB *ListNode
+func Test160(t *testing.T) {
+	tests := []struct {
+		headA  *ListNode
+		headB  *ListNode
 		output *ListNode
 	}{
 		{
-			headA:  &ListNode{Val: 1, Next: &ListNode{Val:2, Next: &ListNode{Val: 3, Next: &ListNode{Val:4, Next: nil}}}},
-			headB:  &ListNode{Val: 5, Next: &ListNode{Val:6, Next: &ListNode{Val: 3, Next: &ListNode{Val:4, Next: nil}}}},
-			output: &ListNode{Val: 3, Next: &ListNode{Val:4, Next: nil}},
+			headA:  &ListNode{Val: 1, Next: &ListNode{Val: 2, Next: &ListNode{Val: 3, Next: &ListNode{Val: 4, Next: nil}}}},
+			headB:  &ListNode{Val: 5, Next: &ListNode{Val: 6, Next: &ListNode{Val: 3, Next: &ListNode{Val: 4, Next: nil}}}},
+			output: &ListNode{Val: 3, Next: &ListNode{Val: 4, Next: nil}},
 		},
 	}
 
@@ -178,18 +176,18 @@ func Test160(t *testing.T)  {
 	}
 }
 
-func Test328(t *testing.T)  {
-	tests := []struct{
-		input *ListNode
+func Test328(t *testing.T) {
+	tests := []struct {
+		input  *ListNode
 		output *ListNode
 	}{
 		{
-			input:  &ListNode{Val: 4, Next: &ListNode{Val:2, Next: &ListNode{Val: 3, Next: &ListNode{Val:4, Next: nil}}}},
-			output: &ListNode{Val: 4, Next: &ListNode{Val:3, Next: &ListNode{Val: 2, Next: &ListNode{Val:4, Next: nil}}}},
+			input:  &ListNode{Val: 4, Next: &ListNode{Val: 2, Next: &ListNode{Val: 3, Next: &ListNode{Val: 4, Next: nil}}}},
+			output: &ListNode{Val: 4, Next: &ListNode{Val: 3, Next: &ListNode{Val: 2, Next: &ListNode{Val: 4, Next: nil}}}},
 		},
 		{
-			input:  &ListNode{Val: 3, Next: &ListNode{Val:2, Next: &ListNode{Val: 1, Next: nil}}},
-			output: &ListNode{Val: 3, Next: &ListNode{Val:1, Next: &ListNode{Val: 2, Next: nil}}},
+			input:  &ListNode{Val: 3, Next: &ListNode{Val: 2, Next: &ListNode{Val: 1, Next: nil}}},
+			output: &ListNode{Val: 3, Next: &ListNode{Val: 1, Next: &ListNode{Val: 2, Next: nil}}},
 		},
 	}
 
@@ -200,4 +198,3 @@ func Test328(t *testing.T)  {
 		})
 	}
 }
-

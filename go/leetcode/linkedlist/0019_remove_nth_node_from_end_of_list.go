@@ -1,6 +1,5 @@
 package linkedlist
 
-
 //给定一个链表，删除链表的倒数第 n 个节点，并且返回链表的头结点。
 //
 //示例：
@@ -17,11 +16,11 @@ package linkedlist
 
 func removeNthFromEnd(head *ListNode, n int) *ListNode {
 
-	dummy := &ListNode{Val:0, Next: head}
+	dummy := &ListNode{Val: 0, Next: head}
 	first := dummy
 	second := dummy
 
-	for i := 1; i <= n + 1; i++ {
+	for i := 1; i <= n+1; i++ {
 		first = first.Next
 	}
 

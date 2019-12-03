@@ -15,18 +15,18 @@ package linkedlist
 //来源：力扣（LeetCode）
 //链接：https://leetcode-cn.com/problems/add-two-numbers
 
- type ListNode struct {
- 	Val int
- 	Next *ListNode
- }
+type ListNode struct {
+	Val  int
+	Next *ListNode
+}
 
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 
 	var carry, sum int
-	dummy := &ListNode{Val:0}
+	dummy := &ListNode{Val: 0}
 	cur := dummy
 
-	for l1 != nil  || l2 != nil {
+	for l1 != nil || l2 != nil {
 		var x, y int
 		if l1 == nil {
 			x = 0
@@ -43,7 +43,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 
 		carry = sum / 10
 		sum = sum % 10
-		cur.Next = &ListNode{Val:sum}
+		cur.Next = &ListNode{Val: sum}
 
 		cur = cur.Next
 		if l1 != nil {
@@ -55,7 +55,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	}
 
 	if carry == 1 {
-		cur.Next = &ListNode{Val:carry}
+		cur.Next = &ListNode{Val: carry}
 	}
 	return dummy.Next
 }

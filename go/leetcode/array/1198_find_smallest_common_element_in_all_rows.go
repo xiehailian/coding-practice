@@ -4,7 +4,7 @@ package array
 //
 //如果矩阵中没有这样的公共元素，就请返回 -1。
 //
-// 
+//
 //
 //示例：
 //
@@ -25,7 +25,7 @@ func smallestCommonElement(mat [][]int) int {
 		for j := 1; j < row; j++ {
 			left, right := 0, column-1
 			for left < right {
-				mid := left + (right - left) / 2
+				mid := left + (right-left)/2
 				if mat[j][mid] < mat[0][i] {
 					left = mid + 1
 				} else {
@@ -40,7 +40,7 @@ func smallestCommonElement(mat [][]int) int {
 			}
 		}
 		return mat[0][i]
-		b:
+	b:
 	}
 	return -1
 }

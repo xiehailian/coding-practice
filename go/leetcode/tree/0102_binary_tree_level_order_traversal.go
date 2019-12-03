@@ -67,5 +67,5 @@ func levelOrder2(root *TreeNode) [][]int {
 		}
 		level++
 	}
-	return  levels
+	return levels
 }

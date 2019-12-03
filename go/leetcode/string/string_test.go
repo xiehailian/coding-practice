@@ -5,25 +5,25 @@ import (
 	"testing"
 )
 
-func Test8(t *testing.T)  {
-	tests := []struct{
-		input string
+func Test8(t *testing.T) {
+	tests := []struct {
+		input  string
 		output int
 	}{
 		{
-			input: "   -42",
+			input:  "   -42",
 			output: -42,
 		},
 		{
-			input: "4193 with words",
+			input:  "4193 with words",
 			output: 4193,
 		},
 		{
-			input: "words and 987",
+			input:  "words and 987",
 			output: 0,
 		},
 		{
-			input: "-91283472332",
+			input:  "-91283472332",
 			output: -2147483648,
 		},
 	}
@@ -38,35 +38,35 @@ func Test8(t *testing.T)  {
 
 }
 
-func Test10(t *testing.T)  {
-	tests := []struct{
-		input string
-		p string
+func Test10(t *testing.T) {
+	tests := []struct {
+		input  string
+		p      string
 		output bool
 	}{
 		{
-			input: "aa",
-			p: "a",
+			input:  "aa",
+			p:      "a",
 			output: false,
 		},
 		{
-			input: "aa",
-			p: "a*",
+			input:  "aa",
+			p:      "a*",
 			output: true,
 		},
 		{
-			input: "ab",
-			p: ".*",
+			input:  "ab",
+			p:      ".*",
 			output: true,
 		},
 		{
-			input: "aab",
-			p: "c*a*b",
+			input:  "aab",
+			p:      "c*a*b",
 			output: true,
 		},
 		{
-			input: "mississippi",
-			p: "mis*is*p*",
+			input:  "mississippi",
+			p:      "mis*is*p*",
 			output: false,
 		},
 	}
@@ -80,20 +80,20 @@ func Test10(t *testing.T)  {
 }
 
 func Test20(t *testing.T) {
-	tests := []struct{
-		input string
+	tests := []struct {
+		input  string
 		output bool
 	}{
 		{
-			input: "([[{[[]]}]])",
+			input:  "([[{[[]]}]])",
 			output: true,
 		},
 		{
-			input: "()[]{}",
+			input:  "()[]{}",
 			output: true,
 		},
 		{
-			input: "(]",
+			input:  "(]",
 			output: false,
 		},
 	}
@@ -107,16 +107,16 @@ func Test20(t *testing.T) {
 }
 
 func Test32(t *testing.T) {
-	tests := []struct{
-		input string
+	tests := []struct {
+		input  string
 		output int
 	}{
 		{
-			input: "(()",
+			input:  "(()",
 			output: 2,
 		},
 		{
-			input: ")()())",
+			input:  ")()())",
 			output: 4,
 		},
 	}
@@ -130,24 +130,24 @@ func Test32(t *testing.T) {
 }
 
 func Test139(t *testing.T) {
-	tests := []struct{
-		s string
-		w []string
+	tests := []struct {
+		s      string
+		w      []string
 		output bool
 	}{
 		{
-			s: "leetcode",
-			w: []string{"leet", "code"},
+			s:      "leetcode",
+			w:      []string{"leet", "code"},
 			output: true,
 		},
 		{
-			s: "applepenapple",
-			w: []string{"apple", "pen"},
+			s:      "applepenapple",
+			w:      []string{"apple", "pen"},
 			output: true,
 		},
 		{
-			s: "catsandog",
-			w: []string{"cats", "dog", "sand", "and", "cat"},
+			s:      "catsandog",
+			w:      []string{"cats", "dog", "sand", "and", "cat"},
 			output: false,
 		},
 	}
@@ -161,20 +161,20 @@ func Test139(t *testing.T) {
 }
 
 func Test150(t *testing.T) {
-	tests := []struct{
-		input []string
+	tests := []struct {
+		input  []string
 		output int
 	}{
 		{
-			input: []string{"2", "1", "+", "3", "*"},
+			input:  []string{"2", "1", "+", "3", "*"},
 			output: 9,
 		},
 		{
-			input: []string{"4", "13", "5", "/", "+"},
+			input:  []string{"4", "13", "5", "/", "+"},
 			output: 6,
 		},
 		{
-			input: []string{"10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"},
+			input:  []string{"10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"},
 			output: 22,
 		},
 	}
@@ -188,16 +188,16 @@ func Test150(t *testing.T) {
 }
 
 func Test316(t *testing.T) {
-	tests := []struct{
-		input string
+	tests := []struct {
+		input  string
 		output string
 	}{
 		{
-			input: "bcabc",
+			input:  "bcabc",
 			output: "abc",
 		},
 		{
-			input: "cbacdcbc",
+			input:  "cbacdcbc",
 			output: "acdb",
 		},
 	}
@@ -211,19 +211,19 @@ func Test316(t *testing.T) {
 }
 
 func Test567(t *testing.T) {
-	tests := []struct{
-		s1 string
-		s2 string
+	tests := []struct {
+		s1     string
+		s2     string
 		output bool
 	}{
 		{
-			s1: "ab",
-			s2: "eidbaooo",
+			s1:     "ab",
+			s2:     "eidbaooo",
 			output: true,
 		},
 		{
-			s1: "ab",
-			s2: "eidboaoo",
+			s1:     "ab",
+			s2:     "eidboaoo",
 			output: false,
 		},
 	}
@@ -237,16 +237,16 @@ func Test567(t *testing.T) {
 }
 
 func Test647(t *testing.T) {
-	tests := []struct{
-		input string
+	tests := []struct {
+		input  string
 		output int
 	}{
 		{
-			input: "abc",
+			input:  "abc",
 			output: 3,
 		},
 		{
-			input: "aaa",
+			input:  "aaa",
 			output: 6,
 		},
 	}

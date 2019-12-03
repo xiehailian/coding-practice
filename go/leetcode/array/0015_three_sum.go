@@ -18,40 +18,40 @@ import "sort"
 //链接：https://leetcode-cn.com/problems/3sum
 
 func threeSum(nums []int) [][]int {
-	 if nums == nil || len(nums) < 3 {
-	 	return [][]int{}
-	 }
-	 res := make([][]int, 0)
-	 sort.Ints(nums)
-	 for i := 0; i < len(nums) - 1; i++ {
-	 	l, r := i + 1, len(nums) - 1
-	 	if nums[i] > 0 || nums[i] + nums[l]  > 0 {
-	 		break
+	if nums == nil || len(nums) < 3 {
+		return [][]int{}
+	}
+	res := make([][]int, 0)
+	sort.Ints(nums)
+	for i := 0; i < len(nums)-1; i++ {
+		l, r := i+1, len(nums)-1
+		if nums[i] > 0 || nums[i]+nums[l] > 0 {
+			break
 		}
-	 	if i > 0 && nums[i] == nums[i-1] {
+		if i > 0 && nums[i] == nums[i-1] {
 			continue
 		}
-	 	for l < r {
-	 		if l > i + 1 && nums[l] == nums[l-1] {
+		for l < r {
+			if l > i+1 && nums[l] == nums[l-1] {
 				l++
 				continue
 			}
-			if r < len(nums) - 1 && nums[r] == nums[r+1] {
+			if r < len(nums)-1 && nums[r] == nums[r+1] {
 				r--
 				continue
 			}
-	 		sum := nums[i] + nums[l] + nums[r]
-	 		if sum < 0 {
+			sum := nums[i] + nums[l] + nums[r]
+			if sum < 0 {
 				l++
 			} else if sum > 0 {
 				r--
 			} else {
 				res = append(res, []int{nums[i], nums[l], nums[r]})
-	 			r--
-	 			l++
+				r--
+				l++
 			}
 
 		}
-	 }
-	 return res
+	}
+	return res
 }

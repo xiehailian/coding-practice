@@ -23,22 +23,22 @@ package linkedlist
 //链接：https://leetcode-cn.com/problems/rotate-list
 
 func rotateRight(head *ListNode, k int) *ListNode {
-    if head == nil || head.Next == nil || k == 0 {
-    	return head
+	if head == nil || head.Next == nil || k == 0 {
+		return head
 	}
 
-    old := head
-    var count = 1
-    for old.Next != nil {
-    	old = old.Next
-    	count++
+	old := head
+	var count = 1
+	for old.Next != nil {
+		old = old.Next
+		count++
 	}
 
-    old.Next = head
+	old.Next = head
 
-    newTail := head
-    for i := 0; i < count - k % count - 1; i++ {
-    	newTail = newTail.Next
+	newTail := head
+	for i := 0; i < count-k%count-1; i++ {
+		newTail = newTail.Next
 	}
 
 	newHead := newTail.Next

@@ -30,7 +30,7 @@ func findDuplicates(nums []int) []int {
 		}
 	}
 	for i := 0; i < len(nums); i++ {
-		if nums[i] -1 != i {
+		if nums[i]-1 != i {
 			res = append(res, nums[i])
 		}
 	}

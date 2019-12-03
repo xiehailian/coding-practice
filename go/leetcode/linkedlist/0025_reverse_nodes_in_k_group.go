@@ -22,10 +22,9 @@ package linkedlist
 //来源：力扣（LeetCode）
 //链接：https://leetcode-cn.com/problems/reverse-nodes-in-k-group
 
-
 func reverseKGroup(head *ListNode, k int) *ListNode {
 
-	var dummy = &ListNode{Val:0}
+	var dummy = &ListNode{Val: 0}
 	dummy.Next = head
 
 	cur, end := dummy, dummy
@@ -60,4 +59,3 @@ func reverse(head *ListNode) *ListNode {
 	}
 	return pre
 }
-

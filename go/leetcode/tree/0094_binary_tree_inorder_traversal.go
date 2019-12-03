@@ -17,11 +17,11 @@ package tree
 //来源：力扣（LeetCode）
 //链接：https://leetcode-cn.com/problems/binary-tree-inorder-traversal
 
- type TreeNode struct {
-     Val int
-     Left *TreeNode
-     Right *TreeNode
- }
+type TreeNode struct {
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
+}
 
 func inorderTraversal(root *TreeNode) []int {
 	res := []int{}

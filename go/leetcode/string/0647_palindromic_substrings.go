@@ -27,7 +27,7 @@ func countSubstrings(s string) int {
 	count := 0
 
 	for end := 0; end < len(s); end++ {
-		for start := 0; start <= end; start ++ {
+		for start := 0; start <= end; start++ {
 			if start == end {
 				dp[start] = make([]bool, len(s))
 				dp[start][end] = true
@@ -42,5 +42,3 @@ func countSubstrings(s string) int {
 	}
 	return count
 }
-
-

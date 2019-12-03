@@ -31,7 +31,7 @@ func firstMissingPositive(nums []int) int {
 	}
 
 	for i := 0; i < len(nums); i++ {
-		if nums[i] != i + 1 {
+		if nums[i] != i+1 {
 			return i + 1
 		}
 	}

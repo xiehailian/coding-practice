@@ -11,7 +11,7 @@ import (
 //说明：
 //
 //所有数字（包括 target）都是正整数。
-//解集不能包含重复的组合。 
+//解集不能包含重复的组合。
 //示例 1:
 //
 //输入: candidates = [2,3,6,7], target = 7,
@@ -65,4 +65,3 @@ func dfs(candidates []int, begin int, size int, path []int, res *[][]int, target
 		path = path[:len(path)-1]
 	}
 }
-

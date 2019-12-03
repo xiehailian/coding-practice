@@ -4,7 +4,7 @@ package tree
 //
 //为了让您更好地理解问题，以下面的二叉搜索树为例：
 //
-// 
+//
 //
 //我们希望将这个二叉搜索树转化为双向循环链表。链表中的每个节点都有一个前驱和后继指针。对于双向循环链表，第一个节点的前驱是最后一个节点，最后一个节点的后继是第一个节点。
 //
@@ -18,7 +18,7 @@ package tree
 //来源：力扣（LeetCode）
 //链接：https://leetcode-cn.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list
 
-func treeToDoublyList(root *TreeNode)  *TreeNode {
+func treeToDoublyList(root *TreeNode) *TreeNode {
 	if root == nil {
 		return nil
 	}

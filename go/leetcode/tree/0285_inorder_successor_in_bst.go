@@ -1,11 +1,10 @@
 package tree
 
-
 //给你一个二叉搜索树和其中的某一个结点，请你找出该结点在树中顺序后继的节点。
 //
 //结点 p 的后继是值比 p.val 大的结点中键值最小的结点。
 //
-// 
+//
 //
 //示例 1:
 //
@@ -45,4 +44,3 @@ func inorderSuccessor2(root *TreeNode, p *TreeNode) *TreeNode {
 	}
 	return res
 }
-

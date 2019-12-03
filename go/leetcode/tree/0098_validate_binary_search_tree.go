@@ -43,6 +43,3 @@ func validBST(node *TreeNode, lower, higher int) bool {
 	}
 	return true
 }
-
-
-

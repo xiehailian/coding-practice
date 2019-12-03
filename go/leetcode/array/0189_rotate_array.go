@@ -25,7 +25,7 @@ package array
 //来源：力扣（LeetCode）
 //链接：https://leetcode-cn.com/problems/rotate-array
 
-func rotate(nums []int, k int) []int{
+func rotate(nums []int, k int) []int {
 
 	if nums == nil || len(nums) <= 1 || k < 0 {
 		return nums

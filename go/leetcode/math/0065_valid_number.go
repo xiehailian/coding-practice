@@ -81,4 +81,3 @@ func isNumber(s string) bool {
 	}
 	return state == digit1 || state == digit2 || state == digit3
 }
-

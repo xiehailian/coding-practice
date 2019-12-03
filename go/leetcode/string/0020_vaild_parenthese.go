@@ -27,7 +27,7 @@ func isValid(s string) bool {
 	}
 
 	var arr []byte
-	symbol := map[byte]byte {
+	symbol := map[byte]byte{
 		')': '(',
 		']': '[',
 		'}': '{',

@@ -26,7 +26,7 @@ func recursion(nums []int, low, high int) int {
 		return nums[low]
 	}
 
-	mid := low + (high - low) / 2
+	mid := low + (high-low)/2
 	left := recursion(nums, low, mid)
 	right := recursion(nums, mid+1, high)
 
@@ -40,7 +40,7 @@ func recursion(nums []int, low, high int) int {
 			leftCount++
 		}
 		if nums[i] == right {
-			rightCount ++
+			rightCount++
 		}
 	}
 
@@ -50,5 +50,3 @@ func recursion(nums []int, low, high int) int {
 		return right
 	}
 }
-
-

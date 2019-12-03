@@ -18,8 +18,6 @@ import "sort"
 //来源：力扣（LeetCode）
 //链接：https://leetcode-cn.com/problems/merge-intervals
 
-
-
 func merge(intervals [][]int) [][]int {
 	if len(intervals) <= 1 {
 		return intervals
@@ -37,7 +35,7 @@ func merge(intervals [][]int) [][]int {
 			if right < intervals[i][1] {
 				right = intervals[i][1]
 			}
-		}else{
+		} else {
 			res = append(res, []int{left, right})
 			left = intervals[i][0]
 			right = intervals[i][1]

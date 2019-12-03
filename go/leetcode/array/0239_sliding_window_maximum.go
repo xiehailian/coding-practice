@@ -29,7 +29,7 @@ func maxSlidingWindow(nums []int, k int) []int {
 	}
 
 	var res = make([]int, 0)
-	for l := 0; l <= len(nums) - k; l++ {
+	for l := 0; l <= len(nums)-k; l++ {
 		r := l + k
 		var max = 0
 		for i := l; i < r; i++ {

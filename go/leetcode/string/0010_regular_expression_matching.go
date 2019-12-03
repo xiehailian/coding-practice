@@ -45,7 +45,7 @@ func isMatch2(s string, p string) bool {
 	for i := len(s); i >= 0; i-- {
 		for j := len(p) - 1; j >= 0; j-- {
 			first := i < len(s) && (p[j] == s[i] || p[j] == '.')
-			if j + 1 < len(p) && p[j+1] == '*' {
+			if j+1 < len(p) && p[j+1] == '*' {
 				dp[i][j] = dp[i][j+2] || (first && dp[i+1][j])
 			} else {
 				dp[i][j] = first && dp[i+1][j+1]

@@ -32,7 +32,7 @@ func divide(dividend int, divisor int) int {
 		return math.MaxInt32
 	}
 
-	negative := dividend ^ divisor < 0
+	negative := dividend^divisor < 0
 	if dividend < 0 {
 		dividend = -dividend
 	}
@@ -45,7 +45,7 @@ func divide(dividend int, divisor int) int {
 	right := dividend + 1
 
 	for left < right {
-		mid := left + (right - left) / 2
+		mid := left + (right-left)/2
 
 		if multiply(mid, divisor) > dividend {
 			right = mid
@@ -64,7 +64,7 @@ func divide(dividend int, divisor int) int {
 func multiply(a, b int) int {
 	var res = 0
 	for b != 0 {
-		if b & 1 != 0 {
+		if b&1 != 0 {
 			res += a
 		}
 		a <<= 1
